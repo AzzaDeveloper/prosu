@@ -77,6 +77,7 @@ void drawobj(int x, int y, int curcombo) {
         // fix the offset
         // Resize it to osu! standards
         combonum.resize(floor(0.8 * combonum.width), 0);
+        //draw the combo
         image(combonum, offset, y);
         // Increase the offset to draw the next combo number
         offset += combonum.width;
@@ -118,8 +119,6 @@ void draw() {
     }
 	for (int i = 0; i < queue.size(); i++) {
         //display the circles in the queue
-        println("combo: " + circle.combo);
-        println("i: ", i);
 		drawobj(queue.get(i).x, queue.get(i).y, queue.get(i).combo);
 	}
 }

@@ -64,21 +64,23 @@ void setup() {
 }
 // Function to draw a circle
 void drawobj(int x, int y, int curcombo) {
+    imageMode(CENTER);
     // Stringify the currrent hit object combo so we can read the characters
     String combo = str(curcombo);
-    int offset = x;
+    int offset = x - loadImage("./skin/default-0.png").width / 2 * (combo.length() - 1);
+    // Load in images from ./sking
+    PImage hitcircle = loadImage("./skin/hitcircle.png");
+    PImage hitcircleoverlay = loadImage("./skin/hitcircleoverlay.png");
     for (int i = 0; i < combo.length(); i++) {
         // Load in the combo numvers from ./skin
         PImage combonum = loadImage("./skin/default-" + str(combo.charAt(i)) + ".png");
+        // fix the offset
         // Resize it to osu! standards
         combonum.resize(floor(0.8 * combonum.width), 0);
         image(combonum, offset, y);
         // Increase the offset to draw the next combo number
-        offset += combonum.width - 2;
+        offset += combonum.width;
     }
-    // Load in images from ./sking
-    PImage hitcircle = loadImage("./skin/hitcircle.png");
-    PImage hitcircleoverlay = loadImage("./skin/hitcircleoverlay.png");
     //draw it
     image(hitcircle, x, y);
     image(hitcircleoverlay, x, y);
@@ -108,7 +110,7 @@ void draw() {
         queue.add(circle);
         // check for new combo from the type of the circle
         if ((circle.type == 2) || ((circle.type >= 4) && (circle.type <= 6))) {
-            comboc = 1;
+            comboc = 0;
         }
         //update the combo
 		count++;
@@ -116,7 +118,8 @@ void draw() {
     }
 	for (int i = 0; i < queue.size(); i++) {
         //display the circles in the queue
-		drawobj(queue.get(i).x, queue.get(i).y, circle.combo);
+        println("combo: " + circle.combo);
+        println("i: ", i);
+		drawobj(queue.get(i).x, queue.get(i).y, queue.get(i).combo);
 	}
-    println(circle.combo);
 }

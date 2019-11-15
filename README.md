@@ -1,7 +1,6 @@
 # prosu!
 *v0.0.2*
 
----
 prosu! is osu!, but written in Processing.
 
 ## How to install and use
@@ -18,7 +17,10 @@ This is a side project written for fun and should work with all operating system
 
 ## This project uses:
 - [Processing](https://processing.org/) as the main framework.
-- [Rafis HDDT Skin (modified)]("https://skins.osuck.net/index.php?newsid=166") 
+- [Visual Studio Code](https://code.visualstudio.com/) as the main IDE.
+- [Monokai Pro](https://monokai.pro/) for color theme.
+- And various other VSCode extensions.
+- [Rafis HDDT Skin (modified)](https://skins.osuck.net/index.php?newsid=166) 
 - A crappy beatmap made by me. Song is Outsider, by Eve.
 
 ---

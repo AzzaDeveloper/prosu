@@ -1,13 +1,18 @@
 // Read the .osu file
-void readfile(String[] lines) {
+void readfile(String[] lines, String path) {
     //Run through everyline in the file
+    String audio = lines[3];
+    if (audio.length() >= 15) {
+        audio = audio.substring(15, lines[3].length());
+    } else {
+        audio = "audio.mp3";
+    }
     for (int i = 0; i < lines.length; i++) {
-        println(lines[i]);
         if (lines[i].equals("[Metadata]")) {
             String artist = lines[i + 3].substring(7, lines[i + 3].length());
             String title = lines[i + 1].substring(6, lines[i + 1].length());
             String difficulty = lines[i + 6].substring(8, lines[i + 6].length());
-            frame.setTitle(artist + " - " + title + " [" + difficulty + "]");
+            surface.setTitle(artist + " - " + title + " [" + difficulty + "]");
             // skip through the rest of the metadata
             i += 11;
         }
@@ -25,12 +30,12 @@ void readfile(String[] lines) {
             break;
         }
     }
-}
-int loadSong(String path) {
     minim = new Minim(this);
-    player = minim.loadFile(path + "/audio.mp3");
+    player = minim.loadFile(path + "/" + audio);
 	player.setGain(-10);
     player.play();
+}
+byte loadSong(String path) {
     // Retrieve all files in oath
     File[] filenames = listFiles(path);
     //variable to store in content of .osu
@@ -39,10 +44,11 @@ int loadSong(String path) {
         // if file ends with osu
         if (filenames[i].getName().substring(length - 4, length).equals(".osu")) {
             String[] lines = loadStrings(filenames[i].getAbsolutePath());
-            readfile(lines);
+            readfile(lines, path);
+            return 0;
         }
     }
+    return 1;
     //Audio control
     // return the error code
-    return 0;
 }

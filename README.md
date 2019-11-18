@@ -28,6 +28,7 @@ This is a side project written for fun and should work with all operating system
 **v0.0.3**
 - Song selection screen! Now support multiple songs folder in, well, the Songs folder.
 - Now you can load your favourite songs. That's it. Sliders are next.
+
 **v0.0.2**
 - Combo numbers!
 - Window title now properly represent playing beatmap.

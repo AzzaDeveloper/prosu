@@ -1,30 +1,44 @@
 # prosu!
-*v0.0.2*
+*v0.0.31*
 
-prosu! is osu!, but written in Processing.
+prosu! is [osu!](https://osu.ppy.sh), but written in [Processing](https://processing.org/).
 
-## How to install and use
+Should you have any questions regarding this project, feel free to hit me up through my discord: **Azza#7631**
 
-Download everything and run it with Processing. No releases yet due to how buggy this is.
+## How to install and build
 
-All lines of code in here is carefully commented so even the newest programmer can understand whats going on :D
+Clone the repo to anywhere you like.
 
-Replace `test` in `Songs` to any beatmap of your choosing.
+Run `[path-to-processing]/processing-java.exe --sketch=[path-to-downloaded-folder] --run`.
 
-The current version **DOES NOT** work with sliders and should be fixed soon.
+No releases yet due to how buggy this is.
+
+All lines of code in here is carefully commented so even the newest programmer can understand whats going on.
+
+Configure your settings in `c_config.pde`
+
+The current version **DOES NOT** work with sliders and should be fixed soon. Maps with sliders will load, just no sliders will appear.
 
 This is a side project written for fun and should work with all operating systems.
 
+## File naming explanation
+- `c_` - **Control**. Used for controlling the game (states, directories...)
+- `f_` - **Functions**.
+- `o_` - **Objects**.
+- `s_` - **Screen**. What the screen displays.
 ## This project uses:
-- [Processing](https://processing.org/) as the main framework.
+- [Minim](http://code.compartmental.net/minim/) for handling sound.
 - [Visual Studio Code](https://code.visualstudio.com/) as the main IDE.
 - [Monokai Pro](https://monokai.pro/) for color theme.
-- And various other VSCode extensions.
-- [Rafis HDDT Skin (modified)](https://skins.osuck.net/index.php?newsid=166) 
-- A crappy beatmap made by me. Song is Outsider, by Eve.
+- [Rafis HDDT Skin (modified)](https://skins.osuck.net/index.php?newsid=166) for the default skin.
 
 ---
 # Changelog
+**v0.0.31**
+- Optimized song selection.
+- Optimized code and made easier to read :D
+- Added license.
+
 **v0.0.3**
 - Song selection screen! Now support multiple songs folder in, well, the Songs folder.
 - Now you can load your favourite songs. That's it. Sliders are next.

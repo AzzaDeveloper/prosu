@@ -1,0 +1,1 @@
+String songsPath = "./Songs"; // The default path to search for songs

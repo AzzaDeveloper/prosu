@@ -26,7 +26,7 @@ void readfile(String[] lines, String path) {
                 // Adding circles to the the Array 
                 Circle hit = new Circle(int(params[0]), int(params[1]), int(params[2]), int(params[3]));
                 circles.add(hit);
-                counter++;
+                counter++;  
             }
             //Breaking the for loop since we already went through the hit cirlces
             break;

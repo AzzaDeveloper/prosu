@@ -30,6 +30,11 @@ void standardScreen(int timem) {
     	drawobj(queue.get(i));
     }
     if (count >= counter) {
+        //if the song finishes (circles displayed > circles counter) reset
         state = selection;
+        mx = -1;
+        my = -1;
+        circles.clear();
+        queue.clear();
     }
 }

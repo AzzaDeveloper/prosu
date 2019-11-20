@@ -46,7 +46,6 @@ void getSongs() {
     File[] filenames = listFiles(songsPath); //Get all of the folders in ./songs
     //drawing the names to the screen with a box surrounding them
     int ySelection = 45; //y value for song selection elements
-    ySelection -= scroll * 25; //scroll 25 pixel each time
     for (int i = 0; i < filenames.length; i++) {
         //removing the id from the beatmap
         String[] string = filenames[i].getName().split(" ");
@@ -64,6 +63,8 @@ void selectionScreen() {
     textSize(25);
     for (int i = 0; i < boxes.size(); i++) {
         SelectionBox box = boxes.get(i);
+        box.y -= (scroll * 25);
+        //draw the selection box
         rect(box.x, box.y, box.width, box.height);
         text(box.content, 10, box.y + 33);
         //check for mouse click on box
@@ -71,6 +72,8 @@ void selectionScreen() {
             loadSong(box.path);
             state = playing;
             timem = millis();
+            print(box.path);
         }
     }
+    scroll = 0;
 }

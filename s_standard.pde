@@ -29,4 +29,7 @@ void standardScreen(int timem) {
         //display the circles in the queue
     	drawobj(queue.get(i));
     }
+    if (count >= counter) {
+        state = selection;
+    }
 }

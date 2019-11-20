@@ -1,4 +1,4 @@
-int scroll = 0;
+float scroll = 0;
 void mouseWheel(MouseEvent event) {
   scroll += event.getCount();
 }

@@ -34,10 +34,10 @@ void readfile(String[] lines, String path) {
     }
     minim = new Minim(this);
     player = minim.loadFile(path + "/" + audio);
-	player.setGain(-10);
+	player.setGain(-5);
     player.play();
 }
-void loadSong(String path) {
+int loadSong(String path) {
     // Retrieve all files in oath
     File[] filenames = listFiles(path);
     for (int i = 0; i < filenames.length; i++) {
@@ -46,8 +46,10 @@ void loadSong(String path) {
         if (filenames[i].getName().substring(length - 4, length).equals(".osu")) {
             String[] lines = loadStrings(filenames[i].getAbsolutePath());
             readfile(lines, path);
+            return 0;
         }
     }
     //Audio control
     // return the error code
+    return 1;
 }

@@ -18,17 +18,34 @@ AudioPlayer player;
 
 String errorMessage = "";
 
+PImage hitcircle;
+PImage hitcircleoverlay;
+PImage[] combonum = new PImage[10];
+
 void setup() {
     size(640,480);
     background(0);
+    //load minim
+    minim = new Minim(this);
+    //load images
+    hitcircle = loadImage("./skin/hitcircle.png");
+    hitcircleoverlay = loadImage("./skin/hitcircleoverlay.png");
+    for (int i = 0; i <= 9; i++) {
+        combonum[i] = loadImage("./skin/default-"+ str(i) + ".png");
+        //resize combonumber to osu standard (0.8x)
+        combonum[i].resize(int(combonum[i].width * 0.8), 0);
+    }
     //load osus
     getSongs(); //s_selection.pde
 }
 
 int timem; // time in millis since starting a song
-
+int x = 0;
 void draw() {
+    println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
+
     background(0);
+
     switch (state) {
         case selection:
             selectionScreen(); //s_selection.pde
@@ -43,8 +60,11 @@ void draw() {
             text(errorMessage, 50, 50);
         break;
         case testing:
-            noFill();
-            stroke(255);
+            x = 0;
+            for (int i = 0; i <= 9; i++) {
+                image(combonum[i], x, 0);
+                x += 25;
+            }
         break;
     }   
 }

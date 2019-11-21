@@ -24,7 +24,7 @@ This is a side project written for fun and should work with all operating system
 ## File naming explanation
 - `c_` - **Control**. Used for controlling the game (states, directories...)
 - `f_` - **Functions**.
-- `o_` - **Objects**.
+- `O_` - **Objects**.
 - `s_` - **Screen**. What the screen displays.
 ## This project uses:
 - [Minim](http://code.compartmental.net/minim/) for handling sound.
@@ -34,6 +34,10 @@ This is a side project written for fun and should work with all operating system
 
 ---
 # Changelog
+**v0.0.32**
+- Fixed memory leak
+- Song now ends properly
+
 **v0.0.31**
 - Optimized song selection.
 - Optimized code and made easier to read :D

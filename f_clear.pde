@@ -9,5 +9,5 @@ void clear() {
     //clear the objs
     circles.clear();
     queue.clear();
-    mini
+    player.pause();
 }

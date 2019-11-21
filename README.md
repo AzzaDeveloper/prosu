@@ -34,6 +34,10 @@ This is a side project written for fun and should work with all operating system
 
 ---
 # Changelog
+**v0.0.33**
+- Fixed crash after finishing second song
+- Added cursor
+
 **v0.0.32**
 - Fixed memory leak
 - Song now ends properly

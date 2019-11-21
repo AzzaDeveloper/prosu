@@ -18,25 +18,32 @@ AudioPlayer player;
 
 String errorMessage = "";
 
+PImage cursor;
 PImage hitcircle;
 PImage hitcircleoverlay;
+PImage approachcircle;
 PImage[] combonum = new PImage[10];
 
 void setup() {
     size(640,480);
     background(0);
+    frameRate(240);
     //load minim
     minim = new Minim(this);
     //load images
+    cursor = loadImage("./skin/cursor.png"); cursor.resize(int(cursor.width * 0.8), 0); //resize cursor
     hitcircle = loadImage("./skin/hitcircle.png");
     hitcircleoverlay = loadImage("./skin/hitcircleoverlay.png");
+    approachcircle = loadImage("./skin/approachcircle");
     for (int i = 0; i <= 9; i++) {
+        //load the combo numbers
         combonum[i] = loadImage("./skin/default-"+ str(i) + ".png");
         //resize combonumber to osu standard (0.8x)
         combonum[i].resize(int(combonum[i].width * 0.8), 0);
     }
     //load osus
     getSongs(); //s_selection.pde
+    noCursor(); // turns off the default cursor
 }
 
 int timem; // time in millis since starting a song
@@ -66,5 +73,6 @@ void draw() {
                 x += 25;
             }
         break;
-    }   
+    }
+        image(cursor, mouseX, mouseY);
 }

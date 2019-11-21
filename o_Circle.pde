@@ -5,6 +5,7 @@ class Circle {
     int time;
     int type;
     int combo;
+    int apSize;
     // Constructor
     Circle(int x1, int y1, int time1, int type1) {
         x = x1;

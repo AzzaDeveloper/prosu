@@ -6,6 +6,7 @@ void clear() {
     mx = -1;
     my = -1;
     count = 0;
+    counter = 0;
     //clear the objs
     circles.clear();
     queue.clear();

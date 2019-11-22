@@ -7,7 +7,12 @@ void standardScreen(int timem) {
     // Retrieve the circle info from the Array
     Circle circle = circles.get(count);
     // If the current time ran is above the time of the circle then display it
-    if ((time >= circle.time)) {
+    for (int i = 0; i < queue.size(); i++) {
+        if (time >= queue.get(i).time ) {
+        	 queue.remove(i);
+        }
+    }
+    if ((time >= circle.time - ar/*+ ar*/)) {
         circle.combo = comboc; // update the circle combo counter with the current combo
         queue.add(circle); // Add the circle to the queue for later displaying
         // check for new combo from the type of the circle
@@ -27,8 +32,5 @@ void standardScreen(int timem) {
         //display the circles in the queue
     	drawobj(queue.get(i));
         // if its been 500ms since the time passed then remove the circles from the queue
-        if (time - queue.get(i).time >= 500) {
-    	    queue.remove(i);
-        }
     }
 }

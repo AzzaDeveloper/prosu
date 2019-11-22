@@ -14,51 +14,51 @@ void readfile(String[] lines, String path) {
     //run through every lines in the file
     for (int i = 0; i <= lines.length; i++) {
         //find [Metadata] values
-        
         if (lines[i].equals("[Metadata]")) {
-            String title;
-            String artist;
-            String difficulty;
+            i++;
+            String title = "";
+            String artist= "";
+            String difficulty = "";
             // if found line break then stop
             while (!lines[i].equals("")) {
+                String[] line = lines[i].split(":");
                 // Get title
-                if (lines[i].split(":")[0].equals("Title")) {
-                    title = lines[i].split(":")[1];
+                if (line[0].equals("Title")) {
+                    title = line[1];
                 }
                 // Get artist
-                if (lines[i].split(":")[0].equals("Artist")) {
-                    artist = lines[i].split(":")[1];
+                if (line[0].equals("Artist")) {
+                    artist = line[1];
                 }
                 // Get version
-                if (lines[i].split(":")[0].equals("Version")) {
-                    difficulty = lines[i].split(":")[1];
+                if (line[0].equals("Version")) {
+                    difficulty = line[1];
                 }
                 i++;
             }
+            surface.setTitle(artist + " - " + title + " [" + difficulty + "]");
         }
         // find [Difficulty] values
 
         if (lines[i].equals("[Difficulty]")) {
-            int hp = 0;
-            int cs = 0;
-            int od = 0;
-            int ar = 0;
+            i++;
             while (!lines[i].equals("")) {
+                String[] line = lines[i].split(":");
                 // Get hp
-                if (lines[i].split(":")[0].equals("HPDrainRate")) {
-                    hp = int(lines[i].split(":")[1]);
+                if (line[0].equals("HPDrainRate")) {
+                    hp = int(line[1]);
                 }
                 // Get cs
-                if (lines[i].split(":")[0].equals("CircleSize")) {
-                    cs = int(lines[i].split(":")[1]);
+                if (line[0].equals("CircleSize")) {
+                    cs = int(line[1]);
                 }
                 // Get od
-                if (lines[i].split(":")[0].equals("OverallDifficulty")) {
-                    od = int(lines[i].split(":")[1]);
+                if (line[0].equals("OverallDifficulty")) {
+                    od = int(line[1]);
                 }
                 // Get ar
-                if (lines[i].split(":")[0].equals("ApproachRate")) {
-                    ar = int(lines[i].split(":")[1]);
+                if (line[0].equals("ApproachRate")) {
+                    ar = int(line[1]);
                 }
                 // If not found ar then od = ar (Old .osu compatability )
                 if (lines[i+1].equals("")) {
@@ -67,8 +67,8 @@ void readfile(String[] lines, String path) {
                     }
                 }
                 i++;
-                
             }
+            diffConvert();
         }
         // If found [HitObjects] then read the rest of the lines in the file and push them into circles
         if (lines[i].equals("[HitObjects]")) {

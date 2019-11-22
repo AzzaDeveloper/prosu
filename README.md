@@ -34,24 +34,19 @@ This is a side project written for fun and should work with all operating system
 
 ---
 # Changelog
-**v0.0.33**
-- Fixed crash after finishing second song
-- Added cursor
+- See [changelog.](https://github.com/AzzaDeveloper/prosu/wiki/Changelog) Contains all major changes and things that you should know about.
+# Contributors
 
-**v0.0.32**
-- Fixed memory leak
-- Song now ends properly
+<div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid gray">
+	<img src="https://i.imgur.com/RL0NPm2.jpg" width=200 height=200 style="margin: 6px">  
+	<h4 style="margin: 6px"><b>Azza</b></h4>  
+	<span style="margin: 6px"><b>Fouding Developer<b></span>
+    <span style="margin: 6px">Commits: Code, documentation.</span>    
+</div>
 
-**v0.0.31**
-- Optimized song selection.
-- Optimized code and made easier to read :D
-- Added license.
-
-**v0.0.3**
-- Song selection screen! Now support multiple songs folder in, well, the Songs folder.
-- Now you can load your favourite songs. That's it. Sliders are next.
-
-**v0.0.2**
-- Combo numbers!
-- Window title now properly represent playing beatmap.
-- Now splitted into multiple files for easier code reading.
+<div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid gray">
+	<img src="https://i.imgur.com/9s9UyBT.png" width=200 height=200 style="margin: 6px">  
+	<h4 style="margin: 6px"><b>Tienei</b></h4>  
+	<span style="margin: 6px"><b>Developer<b></span>
+    <span style="margin: 6px">Commits: Code.</span>  
+</div>

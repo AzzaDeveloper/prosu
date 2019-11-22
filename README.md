@@ -37,16 +37,27 @@ This is a side project written for fun and should work with all operating system
 - See [changelog.](https://github.com/AzzaDeveloper/prosu/wiki/Changelog) Contains all major changes and things that you should know about.
 # Contributors
 
-<div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid gray">
-	<img src="https://i.imgur.com/RL0NPm2.jpg" width=200 height=200 style="margin: 6px">  
-	<h4 style="margin: 6px"><b>Azza</b></h4>  
-	<span style="margin: 6px"><b>Fouding Developer<b></span>
-    <span style="margin: 6px">Commits: Code, documentation.</span>    
+<div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid gray; padding:6px">
+	<img src="https://i.imgur.com/RL0NPm2.jpg" width=200 height=200>  
+	<h4><b>Azza</b></h4>  
+	<span><b>Fouding Developer</b></span><br>
+    <span>
+    	<ul>
+        	<li> Code
+            <li> Bug Squasher
+			<li> Documentation
+       </ul>
+    </span>    
 </div>
 
-<div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid gray">
-	<img src="https://i.imgur.com/9s9UyBT.png" width=200 height=200 style="margin: 6px">  
-	<h4 style="margin: 6px"><b>Tienei</b></h4>  
-	<span style="margin: 6px"><b>Developer<b></span>
-    <span style="margin: 6px">Commits: Code.</span>  
+<div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid gray; padding:6px">
+	<img src="https://i.imgur.com/9s9UyBT.png" width=200 height=200>  
+	<h4><b>Tienei</b></h4>  
+	<span><b>Developer</b></span><br>
+    <span>
+    	<ul>
+        	<li> Code
+            <li> Bug Squasher
+       </ul>
+    </span>    
 </div>

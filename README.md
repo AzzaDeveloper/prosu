@@ -34,7 +34,7 @@ This is a side project written for fun and should work with all operating system
 
 ---
 # Changelog
-**0.0.33**
+**0.0.34**
 - AR added!
 - CS added!
 - New contributor: Tienei.

@@ -7,4 +7,6 @@ int my;
 void mouseClicked() {
     mx = mouseX;
     my = mouseY;
+	println("mx: "+mx);
+	println("my: "+my);
 }

@@ -49,7 +49,7 @@ void setup() {
 int timem; // time in millis since starting a song
 int x = 0;
 void draw() {
-    println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
+    //println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
 
     background(0);
 
@@ -74,5 +74,5 @@ void draw() {
             }
         break;
     }
-        image(cursor, mouseX, mouseY);
+    image(cursor, mouseX, mouseY);
 }

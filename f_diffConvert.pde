@@ -21,4 +21,8 @@ void diffConvert() {
     } else if (od > 5) {
         od = 66 - ((od - 5) * 8);
     }
+    println("cs: "+cs);
+    hitcircle.resize(cs, 0);
+    hitcircleoverlay.resize(cs, 0);
+    approachcircle.resize(cs, 0);
 }

@@ -39,7 +39,6 @@ void readfile(String[] lines, String path) {
             surface.setTitle(artist + " - " + title + " [" + difficulty + "]");
         }
         // find [Difficulty] values
-
         if (lines[i].equals("[Difficulty]")) {
             i++;
             while (!lines[i].equals("")) {
@@ -86,7 +85,6 @@ void readfile(String[] lines, String path) {
     }
     //play the audio
     player = minim.loadFile(path + "/" + audio);
-	player.setGain(-5);
     player.play();
 }
 int loadSong(String path) {

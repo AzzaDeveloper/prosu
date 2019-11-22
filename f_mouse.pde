@@ -4,9 +4,8 @@ void mouseWheel(MouseEvent event) {
 }
 int mx;
 int my;
+// set mx and my to mouse position upon clicking
 void mouseClicked() {
     mx = mouseX;
     my = mouseY;
-	println("mx: "+mx);
-	println("my: "+my);
 }

@@ -34,10 +34,14 @@ This is a side project written for fun and should work with all operating system
 
 ---
 # Changelog
-- See [changelog.](https://github.com/AzzaDeveloper/prosu/wiki/Changelog) Contains all major changes and things that you should know about.
+**0.0.33**
+- AR added!
+- CS added!
+- New contributor: Tienei.
+- See [changelog.](https://github.com/AzzaDeveloper/prosu/wiki/Changelog) for past changes.
 # Contributors
-
-<div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid gray; padding:6px">
+<kbd>
+<div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid black; padding:6px">
 	<img src="https://i.imgur.com/RL0NPm2.jpg" width=200 height=200>  
 	<h4><b>Azza</b></h4>  
 	<span><b>Fouding Developer</b></span><br>
@@ -49,8 +53,10 @@ This is a side project written for fun and should work with all operating system
        </ul>
     </span>    
 </div>
+</kbd>
 
-<div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid gray; padding:6px">
+<kbd>
+<div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid black; padding:6px">
 	<img src="https://i.imgur.com/9s9UyBT.png" width=200 height=200>  
 	<h4><b>Tienei</b></h4>  
 	<span><b>Developer</b></span><br>
@@ -61,3 +67,4 @@ This is a side project written for fun and should work with all operating system
        </ul>
     </span>    
 </div>
+</kbd>

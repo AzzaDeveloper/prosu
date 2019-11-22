@@ -22,6 +22,7 @@ PImage cursor;
 PImage hitcircle;
 PImage hitcircleoverlay;
 PImage approachcircle;
+PImage cursortrail;
 PImage[] combonum = new PImage[10];
 
 void setup() {
@@ -35,6 +36,7 @@ void setup() {
     hitcircle = loadImage("./skin/hitcircle.png");
     hitcircleoverlay = loadImage("./skin/hitcircleoverlay.png");
     approachcircle = loadImage("./skin/approachcircle.png");
+    cursortrail = loadImage("./skin/cursortrail.png");
     for (int i = 0; i <= 9; i++) {
         //load the combo numbers
         combonum[i] = loadImage("./skin/default-"+ str(i) + ".png");
@@ -49,7 +51,7 @@ void setup() {
 int timem; // time in millis since starting a song
 int x = 0;
 void draw() {
-    //println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
+    println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
 
     background(0);
 
@@ -58,7 +60,7 @@ void draw() {
             selectionScreen(); //s_selection.pde
         break;
         case playing:
-            standardScreen(timem); //s_standard.pde
+            standardScreen(); //s_standard.pde
         break;
         case error:
             //draw the error message

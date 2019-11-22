@@ -12,6 +12,9 @@ void drawobj(Circle circle) {
         // Increase the offset to draw the next combo number
         offset += combonum[combon].width;
     }
+    //resize circle
+    hitcircle.resize((int)cs, (int)cs);
+    hitcircleoverlay.resize((int)cs, (int)cs);
     //draw it
     image(hitcircle, circle.x, circle.y);
     image(hitcircleoverlay, circle.x, circle.y);

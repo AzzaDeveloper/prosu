@@ -1,10 +1,10 @@
-int hp = 0;
-int cs = 0;
-int od = 0;
-int ar = 0;
+float hp = 0.0f;
+float cs = 0.0f;
+float od = 0.0f;
+float ar = 0.0f;
 
 void diffConvert() {
-    cs = 109 - 9 * cs;
+    cs = (displayWidth/16)*(1-(0.7*(cs-5)/5));
 
     if (ar < 5) {
         ar = 1600 + ((5 - ar) * 160);

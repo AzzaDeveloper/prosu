@@ -7,11 +7,11 @@ void getSongs() {
         //removing the id from the beatmap
         String[] string = filenames[i].getName().split(" ");
         string[0] = "";
-        //adding the made box to selectionbox for detecting mouse clicks later
+        // Creating a new SelectionBox and adding them to the Array
         SelectionBox box = new SelectionBox(5, ySelection - 40, 630, 50, join(string, " "), filenames[i].getAbsolutePath());
         boxes.add(box);
-        //offset the y
-        ySelection += 70;
+        // Offset y to draw the next box
+        ySelection += 70; 
     }
 }
 void selectionScreen() {

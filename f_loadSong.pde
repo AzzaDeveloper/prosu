@@ -2,14 +2,12 @@ ArrayList<Circle> circles = new ArrayList<Circle>(); // Array to store circles
 int counter = 0; // Circles counter
 // Read the .osu file
 void readfile(String[] lines, String path) {
-    //get the audio file name
-    String audio = lines[3];
-    // if not empty get the name 
+    String audio = lines[3]; //get the audio file name
+    // if not empty get the name of the audio file
     if (audio.length() >= 15) {
         audio = audio.substring(15, lines[3].length());
     } else {
-        //default to audio.mp3 if name is empty
-        audio = "audio.mp3";
+        audio = "audio.mp3"; //default to audio.mp3 if name is empty
     }
     //run through every lines in the file
     for (int i = 0; i <= lines.length; i++) {
@@ -100,7 +98,6 @@ int loadSong(String path) {
             return 0;
         }
     }
-    //Audio control
-    // return the error code
+    // returns the error code
     return 1;
 }

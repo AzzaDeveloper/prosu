@@ -1,1 +1,3 @@
-String songsPath = /*"C:/Users/USERNAME/AppData/Local/osu!/Songs"*/"./Songs/testsongs"; // The default path to search for songs
+//"C:/Users/USERNAME/AppData/Local/osu!/Songs"
+String songsPath = "./Songs/testsongs"; // The default path to search for songs
+boolean debug = true;

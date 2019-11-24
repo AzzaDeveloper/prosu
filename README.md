@@ -44,7 +44,7 @@ This is a side project written for fun and should work with all operating system
 <div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid black; padding:6px">
 	<img src="https://i.imgur.com/RL0NPm2.jpg" width=200 height=200>  
 	<h4><b>Azza</b></h4>  
-	<span><b>Fouding Developer</b></span><br>
+	<span><b>Fouding/Lead Developer</b></span><br>
     <span>
     	<ul>
         	<li> Code
@@ -64,6 +64,7 @@ This is a side project written for fun and should work with all operating system
     	<ul>
         	<li> Code
             <li> Bug Squasher
+			<li>
        </ul>
     </span>    
 </div>

@@ -3,19 +3,24 @@
 
 prosu! is [osu!](https://osu.ppy.sh), but written in [Processing](https://processing.org/).
 
+[Forum topic](https://osu.ppy.sh/community/forums/topics/989272)
+
 Should you have any questions regarding this project, feel free to hit me up through my discord: **Azza#7631**
 
 ## How to install and build
+- Install [Processing](https://processing.org/)
+- Clone the repo to anywhere you like.
+- Run `[path-to-processing]/processing-java.exe --sketch=[path-to-downloaded-folder] --run`.
 
-Clone the repo to anywhere you like.
+## Before you build!
+- Configure your settings in `c_config.pde`
 
-Run `[path-to-processing]/processing-java.exe --sketch=[path-to-downloaded-folder] --run`.
+## Info
+Check the wiki for a detailed explanation of every file/functions (WIP!)
 
-No releases yet due to how buggy this is.
+No releases yet due to how unfinished this is.
 
 All lines of code in here is carefully commented so even the newest programmer can understand whats going on.
-
-Configure your settings in `c_config.pde`
 
 The current version **DOES NOT** work with sliders and should be fixed soon. Maps with sliders will load, just no sliders will appear.
 
@@ -44,12 +49,13 @@ This is a side project written for fun and should work with all operating system
 <div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid black; padding:6px">
 	<img src="https://i.imgur.com/RL0NPm2.jpg" width=200 height=200>  
 	<h4><b>Azza</b></h4>  
-	<span><b>Fouding/Lead Developer</b></span><br>
+	<span><b>Fouding/Lead Developer</b></span><br><br>
     <span>
     	<ul>
         	<li> Code
             <li> Bug Squasher
 			<li> Documentation
+			<li> Wiki
        </ul>
     </span>    
 </div>
@@ -59,12 +65,13 @@ This is a side project written for fun and should work with all operating system
 <div style="float:left; margin: 10px 25px; border-radius: 10px; border: 1px solid black; padding:6px">
 	<img src="https://i.imgur.com/9s9UyBT.png" width=200 height=200>  
 	<h4><b>Tienei</b></h4>  
-	<span><b>Developer</b></span><br>
+	<span><b>Developer</b></span><br><br>
     <span>
     	<ul>
         	<li> Code
             <li> Bug Squasher
-			<li>
+			<br>
+			<br>
        </ul>
     </span>    
 </div>

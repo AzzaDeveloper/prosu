@@ -33,7 +33,9 @@ int timem; // time in millis since starting a song
 int x = 0;
 void draw() {
     //Print the current memory used
-    println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
+    if (debug) {
+        //println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
+    }
 
     background(0);
 

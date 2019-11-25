@@ -39,10 +39,9 @@ This is a side project written for fun and should work with all operating system
 
 ---
 # Changelog
-**0.0.34**
-- AR added!
-- CS added!
-- New contributor: Tienei.
+**v0.0.4**
+- Circles now fade in.
+- Clicking is (somewhat) implemented!
 - See [changelog.](https://github.com/AzzaDeveloper/prosu/wiki/Changelog) for past changes.
 # Contributors
 <kbd>

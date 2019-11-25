@@ -12,7 +12,7 @@ void standardScreen() {
         }
     }
     // If the current time ran is above the time of the circle then display it
-    if ((time >= circle.time - ar)) {
+    if ((time >= circle.time - ar - 50 /* time for the circle to fade in */)) {
         circle.combo = comboc; // update the circle combo counter with the current combo
         queue.add(circle); // Add the circle to the queue for later displaying
         // check for new combo from the type of the circle
@@ -26,6 +26,9 @@ void standardScreen() {
     }
     // run through circles in the queue
     for (int i = 0; i < queue.size(); i++) {
-    	drawobj(queue.get(i)); //display the circles in the queue
+    	if (drawobj(queue.get(i)) == 1) {
+            queue.remove(i);
+        } //display the circles in the queue
     }
+    mx = -1; my = -1;
 }

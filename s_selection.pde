@@ -20,7 +20,7 @@ void selectionScreen() {
     textSize(25);
     for (int i = 0; i < boxes.size(); i++) {
         SelectionBox box = boxes.get(i);
-        box.y -= (scroll * 25);
+        box.y -= scroll * 25;
         //draw the selection box
         rect(box.x, box.y, box.width, box.height);
         text(box.content, 10, box.y + 33);
@@ -31,5 +31,6 @@ void selectionScreen() {
             timem = millis();
         }
     }
-    scroll = 0;
+    scroll *= 0;
+    println("scroll: "+scroll);
 }

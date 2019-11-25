@@ -18,7 +18,7 @@ byte drawobj(Circle circle) {
         circle.alpha += 51;
     }
     //
-    if (dist(circle.x, circle.y, mx, my) <= loadImage("./skin/default-0.png").width / 2) {;
+    if (dist(circle.x, circle.y, mx, my) <= (hitcircle.width / 2)) {;
         return 1;
         //clicked
     }

@@ -32,5 +32,4 @@ void selectionScreen() {
         }
     }
     scroll *= 0;
-    println("scroll: "+scroll);
 }

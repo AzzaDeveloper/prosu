@@ -20,6 +20,7 @@ String errorMessage = "";
 
 void setup() {
     // Setup
+    frameRate(69420);
     size(640,480);
     background(0);
     // Loads
@@ -34,7 +35,7 @@ int x = 0;
 void draw() {
     //Print the current memory used
     if (debug) {
-        //println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
+        println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
     }
 
     background(0);
@@ -60,5 +61,13 @@ void draw() {
             }
         break;
     }
+    // Draw the framerate
+    fill(82, 186, 113); //cool green
+    noStroke(); // remove the white border
+    rect(width - 60, height - 20, 60, 20, 5, 5, 5, 5); //draw the green box
+    fill(255); // change color to white
+    textSize(15); // change the text size
+    text(int(frameRate) + "fps", width - 55, height - 5); // draw the framerate
+    // Draw the cursor
     image(cursor, mouseX, mouseY);
 }

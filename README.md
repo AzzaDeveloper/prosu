@@ -39,9 +39,8 @@ This is a side project written for fun and should work with all operating system
 
 ---
 # Changelog
-**v0.0.4**
-- Circles now fade in.
-- Clicking is (somewhat) implemented!
+**v0.0.41**
+- Added a FPS counter.
 - See [changelog.](https://github.com/AzzaDeveloper/prosu/wiki/Changelog) for past changes.
 # Contributors
 <kbd>

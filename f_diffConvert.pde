@@ -21,7 +21,6 @@ void diffConvert() {
     } else if (od > 5) {
         od = 66 - ((od - 5) * 8);
     }
-    println("diffConvert: " + cs);
     hitcircle.resize(int(cs), 0);
     hitcircleoverlay.resize(int(cs), 0);
     approachcircle.resize(int(cs), 0);

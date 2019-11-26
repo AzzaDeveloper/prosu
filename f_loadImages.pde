@@ -16,5 +16,11 @@ void loadImages() {
         combonum[i] = loadImage("./skin/default-"+ str(i) + ".png");
         //resize combonumber to osu standard (0.8x)
         combonum[i].resize(int(combonum[i].width * 0.8), 0);
+        /*println("loadImage: " + cs);
+        if (cs > 0) {
+            combonum[i].resize(int(cs / 1.5), 0);
+        } else {
+            combonum[i].resize(int(combonum[i].width * 0.8), 0);
+        }*/
     }
 }

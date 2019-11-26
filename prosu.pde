@@ -3,13 +3,7 @@
 // For an understanding of how osu! elements works have a read of these:
 // https://osu.ppy.sh/help/wiki/Skinning/osu!
 // https://osu.ppy.sh/help/wiki/osu!_File_Formats/Osu_(file_format)
-// All mouse-related processing is done in f_mouse.pde
 // Check c_config.pde to set things up before running.
-
-// ----------------------------------------------------------------------- /
-// the Cirlce object is stored in circle.pde
-// drawObj is stored in drawObjFunction.pde
-// ----------------------------------------------------------------------- //
 
 // Import sound libray
 import ddf.minim.*;
@@ -22,6 +16,7 @@ void setup() {
     // Setup
     frameRate(69420);
     size(640,480);
+    //fullScreen();
     background(0);
     // Loads
     minim = new Minim(this); //load mini

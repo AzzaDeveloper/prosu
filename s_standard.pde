@@ -28,7 +28,7 @@ void standardScreen() {
     for (int i = 0; i < queue.size(); i++) {
     	if (drawobj(queue.get(i)) == 1) {
             queue.remove(i);
+            mx = -1; my = -1;
         } //display the circles in the queue
     }
-    mx = -1; my = -1;
 }

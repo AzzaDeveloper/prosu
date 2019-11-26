@@ -25,18 +25,16 @@ void selectionScreen() {
         // Make selection box visble if it in range
         if (box.y > -50 && box.y < height + 50) {
             //draw the selection box
-            if (collision(mouseX, mouseY, box.x, box.y - 25, box.width, box.height)) {
+            if (collision(mouseX, mouseY, box.x, box.y - 25, 2000, 50)) {
                 // if hovered move the x back smoothly with lerp
                 box.x = lerp(box.x, width / 5, 0.05);
-                rect(box.x, box.y, box.width, box.height);
-                text(box.content, box.x + 5, box.y + 33);
             } else {
                 // else draw normally
                 box.x = lerp(box.x, width / 3, 0.05);
-                rect(box.x, box.y, box.width, box.height);
-                text(box.content, box.x + 5, box.y + 33);
             }
-            if ((mx > box.x) && (my > box.y) && (mx < box.x + box.width) && (my < box.y + box.height)) {
+            rect(box.x, box.y, 2000, 50);
+            text(box.content, box.x + 5, box.y + 33);
+            if ((mx > box.x) && (my > box.y) && (mx < box.x + 2000) && (my < box.y + 50)) {
                 loadSong(box.path);
                 state = playing;
                 timem = millis();

@@ -27,6 +27,7 @@ void standardScreen() {
     // run through circles in the queue
     for (int i = 0; i < queue.size(); i++) {
     	if (drawobj(queue.get(i)) == 1) {
+            // If returns 1 (clicked) remove the circle from the queue. 
             queue.remove(i);
             mx = -1; my = -1;
         } //display the circles in the queue

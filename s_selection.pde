@@ -19,25 +19,28 @@ void selectionScreen() {
     noFill();
     stroke(255);
     textSize(25);
+    rectMode(CORNER);
     for (int i = 0; i < boxes.size(); i++) {
         SelectionBox box = boxes.get(i);
-        box.y -= scroll * 25;
+        box.y -= scroll * 1;
         //draw the selection box
-        if (((mouseX > box.x) && (mouseY > box.y) && (mouseX < box.x + box.width) && (mouseY < box.y + box.height))) {
-            // if hovered move the x back
-            rect(width / 5, box.y, box.width, box.height);
-            text(box.content, width / 5  + 5, box.y + 33);
+        if (collision(mouseX, mouseY, box.x, box.y - 25, box.width, box.height)) {
+            // if hovered move the x back smoothly with lerp
+            box.x = lerp(box.x, width / 5, 0.05);
+            rect(box.x, box.y, box.width, box.height);
+            text(box.content, box.x + 5, box.y + 33);
         } else {
             // else draw normally
+            box.x = lerp(box.x, width / 3, 0.05);
             rect(box.x, box.y, box.width, box.height);
             text(box.content, box.x + 5, box.y + 33);
         }
-        //check for mouse click on box
         if ((mx > box.x) && (my > box.y) && (mx < box.x + box.width) && (my < box.y + box.height)) {
             loadSong(box.path);
             state = playing;
             timem = millis();
         }
+        //check for mouse click on box
     }
-    scroll *= 0;
+    scroll = lerp(scroll, 0, 0.01);
 }

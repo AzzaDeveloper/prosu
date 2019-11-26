@@ -1,7 +1,7 @@
 // song selection box 
 class SelectionBox {
-    int x;
-    int y;
+    float x;
+    float y;
     int width;
     int height;
     String content;

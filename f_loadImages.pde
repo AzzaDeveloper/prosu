@@ -14,7 +14,5 @@ void loadImages() {
     for (int i = 0; i <= 9; i++) {
         //load the combo numbers
         combonum[i] = loadImage("./skin/default-"+ str(i) + ".png");
-        //resize combonumber to osu standard (0.8x)
-        combonum[i].resize(int(combonum[i].width * 0.8), 0);
     }
 }

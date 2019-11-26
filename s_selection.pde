@@ -23,24 +23,27 @@ void selectionScreen() {
     for (int i = 0; i < boxes.size(); i++) {
         SelectionBox box = boxes.get(i);
         box.y -= scroll * 1;
-        //draw the selection box
-        if (collision(mouseX, mouseY, box.x, box.y - 25, box.width, box.height)) {
-            // if hovered move the x back smoothly with lerp
-            box.x = lerp(box.x, width / 5, 0.05);
-            rect(box.x, box.y, box.width, box.height);
-            text(box.content, box.x + 5, box.y + 33);
-        } else {
-            // else draw normally
-            box.x = lerp(box.x, width / 3, 0.05);
-            rect(box.x, box.y, box.width, box.height);
-            text(box.content, box.x + 5, box.y + 33);
+        // Make selection box visble if it in range
+        if (box.y > -50 && box.y < height + 50) {
+            //draw the selection box
+            if (collision(mouseX, mouseY, box.x, box.y - 25, box.width, box.height)) {
+                // if hovered move the x back smoothly with lerp
+                box.x = lerp(box.x, width / 5, 0.05);
+                rect(box.x, box.y, box.width, box.height);
+                text(box.content, box.x + 5, box.y + 33);
+            } else {
+                // else draw normally
+                box.x = lerp(box.x, width / 3, 0.05);
+                rect(box.x, box.y, box.width, box.height);
+                text(box.content, box.x + 5, box.y + 33);
+            }
+            if ((mx > box.x) && (my > box.y) && (mx < box.x + box.width) && (my < box.y + box.height)) {
+                loadSong(box.path);
+                state = playing;
+                timem = millis();
+            }
+            //check for mouse click on box
         }
-        if ((mx > box.x) && (my > box.y) && (mx < box.x + box.width) && (my < box.y + box.height)) {
-            loadSong(box.path);
-            state = playing;
-            timem = millis();
-        }
-        //check for mouse click on box
     }
     scroll = lerp(scroll, 0, 0.01);
 }

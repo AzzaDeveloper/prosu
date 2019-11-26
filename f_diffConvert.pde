@@ -28,6 +28,6 @@ void diffConvert() {
         //load the combo numbers
         combonum[i] = loadImage("./skin/default-"+ str(i) + ".png");
         //resize combonumber to osu standard (0.8x)
-        combonum[i].resize(int(cs / 2), 0);
+        combonum[i].resize(int(0.8 * (cs / 2)), 0);
     }
 }

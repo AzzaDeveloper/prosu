@@ -9,7 +9,7 @@ void getSongs() {
         string[0] = "";
         String name = join(string, " ");
         // Creating a new SelectionBox and adding them to the Array
-        SelectionBox box = new SelectionBox(width / 3, ySelection, 4200, 50, name, filenames[i].getAbsolutePath());
+        SelectionBox box = new SelectionBox(width / 3, ySelection, name, filenames[i].getAbsolutePath());
         boxes.add(box);
         // Offset y to draw the next box
         ySelection += 70; 
@@ -19,7 +19,6 @@ void selectionScreen() {
     noFill();
     stroke(255);
     textSize(25);
-    rectMode(CORNER);
     for (int i = 0; i < boxes.size(); i++) {
         SelectionBox box = boxes.get(i);
         box.y -= scroll * 1;

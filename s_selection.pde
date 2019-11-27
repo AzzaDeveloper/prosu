@@ -19,7 +19,7 @@ void selectionScreen() {
     noFill();
     stroke(255);
     textSize(25);
-    for (int i = 0; i < boxes.size(); i++) {
+    for (int i = 0; i < int(boxes.size() / 2); i++) {
         SelectionBox box = boxes.get(i);
         box.y -= scroll * 1;
         //draw the selection box

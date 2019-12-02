@@ -1,5 +1,4 @@
-byte drawobj(Circle circle) {
-    imageMode(CENTER);
+void drawobj(Circle circle) {
     tint(255, circle.alpha);
     // Stringify the currrent hit object combo so we can read the digits
     String combo = str(circle.combo);
@@ -17,14 +16,8 @@ byte drawobj(Circle circle) {
     if (circle.alpha < 255) {
         circle.alpha += 51;
     }
-    //
-    if (dist(circle.x, circle.y, mx, my) <= (hitcircle.width / 2)) {;
-        return 1;
-        //clicked
-    }
     //draw it
     image(hitcircle, circle.x, circle.y);
     image(hitcircleoverlay, circle.x, circle.y);
     tint(255, 255);
-    return 0; //nothing happened
 }

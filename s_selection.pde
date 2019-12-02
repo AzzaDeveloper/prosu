@@ -19,7 +19,7 @@ void selectionScreen() {
     noFill();
     stroke(255);
     textSize(25);
-    for (int i = 0; i < int(boxes.size() / 2); i++) {
+    for (int i = 0; i < int(boxes.size()); i++) {
         SelectionBox box = boxes.get(i);
         box.y -= scroll * 1;
         // Make selection box visble if it in range
@@ -30,16 +30,17 @@ void selectionScreen() {
                 box.x = lerp(box.x, width / 5, 0.05);
             } else {
                 // else draw normally
-                box.x = lerp(box.x, width / 3, 0.05);
+                box.x = lerp(box.x, width / 2, 0.05);
             }
             rect(box.x, box.y, 2000, 50);
             text(box.content, box.x + 5, box.y + 33);
+            //check for mouse click on box
             if ((mx > box.x) && (my > box.y) && (mx < box.x + 2000) && (my < box.y + 50)) {
+                state = loading;
                 loadSong(box.path);
                 state = playing;
                 timem = millis();
             }
-            //check for mouse click on box
         }
     }
     scroll = lerp(scroll, 0, 0.01);

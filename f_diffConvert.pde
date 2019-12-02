@@ -3,8 +3,12 @@ float cs = 0.0f;
 float od = 0.0f;
 float ar = 0.0f;
 
+float perfectMS;
+float mediumMS;
+float lateMS;
+
 void diffConvert() {
-    cs = (width/16)*(1-(0.7*(cs-5)/5))*2;
+    cs = (640/16)*(1-(0.7*(cs-5)/5))*2;
 
     if (ar < 5) {
         ar = 1600 + ((5 - ar) * 160);
@@ -21,6 +25,11 @@ void diffConvert() {
     } else if (od > 5) {
         od = 66 - ((od - 5) * 8);
     }
+
+    perfectMS = abs(199.5 - (od * 10));
+    mediumMS = abs(139.5 - (od * 10));
+    lateMS = abs(79.5 - (od * 10));
+
     hitcircle.resize(int(cs), 0);
     hitcircleoverlay.resize(int(cs), 0);
     approachcircle.resize(int(cs), 0);

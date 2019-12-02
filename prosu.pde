@@ -24,7 +24,7 @@ void setup() {
     getSongs(); //s_selection.pde
     noCursor(); // turns off the default cursor
 }
-
+int rot = 0;
 int timem; // time in millis since starting a song
 int x = 0;
 void draw() {
@@ -34,6 +34,7 @@ void draw() {
     }
 
     background(0);
+    imageMode(CENTER);
 
     switch (state) {
         case selection:
@@ -41,6 +42,11 @@ void draw() {
         break;
         case playing:
             standardScreen(); //s_standard.pde
+        break;
+        case loading:
+            textSize(50);
+            String load = "Loading...";
+            text(load, width / 2 - textWidth(load), height / 2 - 50);
         break;
         case error:
             //draw the error message

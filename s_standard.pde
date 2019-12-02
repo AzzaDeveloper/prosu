@@ -2,6 +2,7 @@ ArrayList<Circle> queue = new ArrayList<Circle>(); // Queue of circles to draw e
 int comboc = 1; // The current hit object combo
 int count = 0; // Counter of how many circles displayed
 int time;
+
 void standardScreen() {
     time = millis() - timem; // The current time since starting the song
     Circle circle = circles.get(count); // Retrieve the circle info from the Array
@@ -26,10 +27,28 @@ void standardScreen() {
     }
     // run through circles in the queue
     for (int i = 0; i < queue.size(); i++) {
-    	if (drawobj(queue.get(i)) == 1) {
-            // If returns 1 (clicked) remove the circle from the queue. 
-            queue.remove(i);
-            mx = -1; my = -1;
-        } //display the circles in the queue
+        drawobj(queue.get(i));
+        if (clicked) {
+            switch (click(queue.get(i), time)) {
+                case 0:
+                    image(hit0, queue.get(i).x, queue.get(i).y);
+                    queue.remove(i);
+                break;
+                case 50:
+                    image(hit50, queue.get(i).x, queue.get(i).y);
+                    queue.remove(i);
+                break;
+                case 100:
+                    image(hit100, queue.get(i).x, queue.get(i).y);
+                    queue.remove(i);
+                break;
+                case 300:
+                    image(hit300, queue.get(i).x, queue.get(i).y);
+                    queue.remove(i);
+                break;
+            }
+        }
     }
+    mx = -1; my = -1;
+    clicked = false;
 }

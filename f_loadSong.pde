@@ -73,7 +73,7 @@ void readfile(String[] lines, String path) {
                 //Reading the HitObjects parameters (separated by ,)
                 String[] params = split(lines[n],  ",");
                 // Adding circles to the the Array 
-                Circle hit = new Circle(int(params[0]), int(params[1]), int(params[2]), int(params[3]));
+                Circle hit = new Circle(int(params[0]) + (width - 640) / 2, int(params[1]) + (height - 480) / 2, int(params[2]), int(params[3]));
                 circles.add(hit);
                 counter++;  
             }
@@ -83,6 +83,7 @@ void readfile(String[] lines, String path) {
     }
     //play the audio
     player = minim.loadFile(path + "/" + audio);
+    player.setGain(-10);
     player.play();
 }
 int loadSong(String path) {

@@ -10,6 +10,7 @@ Should you have any questions regarding this project, feel free to hit me up thr
 ## How to install and build
 - Install [Processing](https://processing.org/)
 - Clone the repo to anywhere you like.
+- Open the Processing IDE > Choose Sketch > Import Library > Add Library > Search for Minim > hit Install
 - Run `[path-to-processing]/processing-java.exe --sketch=[path-to-downloaded-folder] --run`.
 
 ## Before you build!

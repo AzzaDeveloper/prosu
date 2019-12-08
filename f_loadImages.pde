@@ -1,8 +1,5 @@
 PImage cursor;
-PImage hit300;
-PImage hit100;
-PImage hit50;
-PImage hit0;
+PImage[] hit = new PImage[4];
 
 PImage hitcircle;
 PImage hitcircleoverlay;
@@ -20,10 +17,10 @@ void loadImages() {
     approachcircle = loadImage("./skin/approachcircle.png");
     cursortrail = loadImage("./skin/cursortrail.png");
 
-    hit300 = loadImage("./skin/hit300.png");
-    hit100 = loadImage("./skin/hit100.png");
-    hit50 = loadImage("./skin/hit50.png");
-    hit0 = loadImage("./skin/hit0.png");
+    hit[3] = loadImage("./skin/hit300.png");
+    hit[2] = loadImage("./skin/hit100.png");
+    hit[1] = loadImage("./skin/hit50.png");
+    hit[0] = loadImage("./skin/hit0.png");
 
     for (int i = 0; i <= 9; i++) {
         //load the combo numbers

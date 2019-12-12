@@ -8,8 +8,8 @@ float mediumMS;
 float lateMS;
 
 void diffConvert() {
-    cs = (640/16)*(1-(0.7*(cs-5)/5))*2;
-
+    cs = (1000/16)*(1-(0.7*(cs-5)/5))*2;
+    
     if (ar < 5) {
         ar = 1600 + ((5 - ar) * 160);
     } else if (ar == 5) {
@@ -30,6 +30,7 @@ void diffConvert() {
     mediumMS = abs(139.5 - (od * 10));
     lateMS = abs(79.5 - (od * 10));
 
+    float scale = (1.0 - 0.7 * (cs - 5) / 5) / 2;
     hitcircle.resize(int(cs), 0);
     hitcircleoverlay.resize(int(cs), 0);
     approachcircle.resize(int(cs), 0);

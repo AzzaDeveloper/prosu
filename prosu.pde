@@ -15,8 +15,8 @@ String errorMessage = "";
 void setup() {
     // Setup
     frameRate(69420);
-    size(640,480);
-    //fullScreen();
+    //size(800,600);
+    fullScreen();
     background(0);
     // Loads
     minim = new Minim(this); //load mini
@@ -30,13 +30,16 @@ int x = 0;
 void draw() {
     //Print the current memory used
     if (debug) {
-        println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
+        //println((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / (1024 * 1024) + " MB");
     }
 
     background(0);
     imageMode(CENTER);
 
     switch (state) {
+        case menu:
+            menuScreen(); //s_menu.pde
+        break;
         case selection:
             selectionScreen(); //s_selection.pde
         break;

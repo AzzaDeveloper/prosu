@@ -2,6 +2,7 @@ ArrayList<Circle> queue = new ArrayList<Circle>(); // Queue of circles to draw e
 int comboc = 1; // The current hit object combo
 int count = 0; // Counter of how many circles displayed
 int time;
+int timedebug;
 
 void standardScreen() {
     time = millis() - timem; // The current time since starting the song
@@ -13,7 +14,7 @@ void standardScreen() {
         }
     }
     // If the current time ran is above the time of the circle then display it
-    if ((time >= circle.time - ar - 50 /* time for the circle to fade in */)) {
+    if ((time >= circle.time - ar - 150 /* time for the circle to fade in */)) {
         if ((circle.type == 2) || ((circle.type >= 4) && (circle.type <= 6))) {
             comboc = 1;
         }
@@ -29,15 +30,21 @@ void standardScreen() {
     for (int i = 0; i < queue.size(); i++) {
         Circle obj = queue.get(i);
         drawobj(obj);
+        int clicc = click(obj, time);
         if (clicked) {
-            switch (click(queue.get(i), time)) {
+            switch (clicc) {
+                // f_input.pde
+                // click(Circle, int) returns the score when clicked (300, 100, 50, 0)
                 case -1:
                 break;
                 default:
-                    image(hit[click(queue.get(i), time)], obj.x, obj.y);
+                    queue.remove(i);
+                    //draw the correct score
+                    image(hit[clicc], obj.x, obj.y);
                 break;
             }
         }
+        clicked = false;
     }
-    clicked = false;
+    
 }

@@ -40,8 +40,11 @@ This is a side project written for fun and should work with all operating system
 
 ---
 # Changelog
-**v0.0.42**
-- Song selection screen improving.
+**v0.0.5**
+- Huge performance fix while playing
+- Now includes a menu. (Options are WIP)
+- Difficulty calculations improvements
+- Clicking improvements
 - See [changelog.](https://github.com/AzzaDeveloper/prosu/wiki/Changelog) for past changes.
 # Contributors
 <kbd>

@@ -1,7 +1,7 @@
 ArrayList<Circle> circles = new ArrayList<Circle>(); // Array to store circles
 int counter = 0; // Circles counter
 // Read the .osu file
-void readfile(String[] lines, String path) {
+String readfile(String[] lines, String path) {
     String audio = lines[3]; //get the audio file name
     // if not empty get the name of the audio file
     if (audio.length() >= 15) {
@@ -81,12 +81,10 @@ void readfile(String[] lines, String path) {
             break;
         }
     }
-    //play the audio
-    player = minim.loadFile(path + "/" + audio);
-    player.setGain(-10);
-    player.play();
+    // return the audio path
+    return path + "/" + audio;
 }
-int loadSong(String path) {
+String loadSong(String path) {
     // Retrieve all files in oath
     File[] filenames = listFiles(path);
     for (int i = 0; i <= filenames.length; i++) {
@@ -95,10 +93,10 @@ int loadSong(String path) {
         if (filenames[i].getName().substring(length - 4, length).equals(".osu")) {
             String[] lines = loadStrings(filenames[i].getAbsolutePath());
             //read the osu file
-            readfile(lines, path);
-            return 0;
+            String song = readfile(lines, path);
+            return song;
         }
     }
     // returns the error code
-    return 1;
+    return "";
 }

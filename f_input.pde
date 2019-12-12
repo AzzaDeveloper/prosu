@@ -40,3 +40,9 @@ boolean collision(int cx, int cy, float x, float y, int w, int h) {
 	}
 	return false;
 }
+boolean collision(float cx, float cy, float x, float y, float w, float h) {
+	if ((cx > x) && (cy > y) && (cx < x + w) && (cy < y + h)) {
+		return true;
+	}
+	return false;
+}
